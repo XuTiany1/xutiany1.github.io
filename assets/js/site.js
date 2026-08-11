@@ -92,6 +92,13 @@
       .join("");
   }
 
+  if (CONFIG.social && CONFIG.social.scholar) {
+    $("#scholar-note").innerHTML =
+      `For a complete list of publications, please visit my <a href="${esc(CONFIG.social.scholar)}" target="_blank" rel="noopener">Google Scholar</a>.`;
+  } else {
+    $("#scholar-note").remove();
+  }
+
   document.querySelectorAll(".tab").forEach(btn => {
     btn.addEventListener("click", () => {
       document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", "false"));

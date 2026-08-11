@@ -12,14 +12,15 @@ const CONFIG = {
   photo: "assets/img/profile.jpg",
 
   // ---- accent color: one value re-themes the whole site ----
-  accent: "#b509ac",
+  accent: "#009f13",
 
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
-    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). 
-    I am fortunate to work with <a href="#">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a>.`,
+    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="#">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a>.`,
 
-    `My research focuses on <b> model reasoning </b> <i>one clear sentence about what you actually care about</i>.`
+    `I am interested in model reasoning
+    
+    My research focuses on <b>multilingual model reasoning, mu</b>.`
   ],
 
   // ---- footer icons: set any to "" to hide it ----

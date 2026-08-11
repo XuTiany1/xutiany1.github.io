@@ -36,14 +36,14 @@ const NEWS = [
     date: "July 2025",
     title: "Joined Qualcomm AI Research as a research intern",
     tag: "",
-    desc: "Help build personalized Speech Recognition models for edge usage with significantly lower inference cost",
+    desc: "Focus on building personalized ASR models with significant lower inference cost",
     url: ""
   },
   {
     date: "Jan 2025",
     title: "Joined Mila as a research intern under Prof. David Adelani",
     tag: "",
-    desc: "Focus on foundation models and reasoning for multilingual languages",
+    desc: "Focus on multilingual reasoning and foundation models",
     url: ""
   }
 ];
