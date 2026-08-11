@@ -14,41 +14,39 @@
 const PUBLICATIONS = [
   {
     selected: true,
-    badge: "ICML",
-    thumb: "assets/img/papers/paper1.png",
-    title: "A Descriptive Title That Fits On Two Lines At Most",
-    authors: "{me}, Second Author, Third Author, and Senior Author",
-    venue: "ICML 2026",
-    note: "(Oral)",
+    badge: "Under Submission",
+    thumb: "assets/img/papers/MGSM_PRO.png",
+    title: "MGSM-Pro: A Simple Strategy for Robust Multilingual Mathematical Reasoning Evaluation",
+    authors: "{me}, Kosei Uemura, Alfred Malengo Kondoro, Tadesse Destaw Belay, Catherine Nana Nyaah Essuman, Ifeoma Okoh, Ganiyat Afolabi, Ayodele Awokoya, David Ifeoluwa Adelani",
+    venue: "",
+    note: "",
     links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/0000.00000" },
-      { label: "Code",  url: "https://github.com/you/repo" },
-      { label: "Blog",  url: "https://example.com" }
+      { label: "paper", url: "https://arxiv.org/abs/2601.21225" },
+      { label: "dataset",  url: "https://huggingface.co/datasets/McGill-NLP/mgsm-pro" },
     ]
   },
   {
     selected: true,
-    badge: "arXiv",
-    thumb: "assets/img/papers/paper2.png",
-    title: "Another Paper Title Goes Right Here",
-    authors: "First Author*, {me}*, Third Author, and Senior Author",
-    venue: "2026",
-    note: "",
+    badge: "ACL",
+    thumb: "assets/img/papers/AfriqueLLM.png",
+    title: "AfriqueLLM: How Data Mixing and Model Architecture Impact Continued Pre-training for African Languages",
+    authors: "Hao Yu, {me}, Michael A. Hedderich, Wassim Hamidouche, Syed Waqas Zamir, David Ifeoluwa Adelani",
+    venue: "ACL 2026",
+    note: "(Oral)",
     links: [
-      { label: "arXiv", url: "https://arxiv.org/abs/0000.00000" }
+      { label: "paper", url: "https://aclanthology.org/2026.acl-long.267/" }
     ]
   },
   {
     selected: false,
-    badge: "ACL",
-    thumb: "assets/img/papers/paper3.png",
-    title: "A Workshop Paper You Want Listed But Not Featured",
-    authors: "{me}, Collaborator, and Advisor",
-    venue: "In Findings of the Association for Computational Linguistics: ACL 2025",
-    note: "",
+    badge: "MAIN",
+    thumb: "assets/img/papers/SNAP.png",
+    title: "SNAP: Stopping Catastrophic Forgetting in Hebbian Learning with Sigmoidal Neuronal Adaptive Plasticity",
+    authors: "{me}, Patrick Zheng, Shiyan Liu, Sicheng Lyu, Isabeau Prémont-Schwarz",
+    venue: "Montreal AI and Neuroscience conference",
+    note: "(Oral)",
     links: [
-      { label: "DOI",  url: "https://doi.org/10.0000/000" },
-      { label: "Code", url: "https://github.com/you/repo" }
+      { label: "paper",  url: "https://arxiv.org/abs/2410.15318" },
     ]
   }
 ];

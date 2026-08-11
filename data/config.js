@@ -5,8 +5,8 @@
 const CONFIG = {
 
   // ---- name (first name renders bold, last name light) ----
-  firstName: "Your",
-  lastName: "Name",
+  firstName: "Tianyi",
+  lastName: "Xu",
 
   // ---- profile photo ----
   photo: "assets/img/profile.jpg",
@@ -16,23 +16,19 @@ const CONFIG = {
 
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
-    `I am a <b>PhD student</b> at <a href="https://example.edu">Your University</a>,
-     where I work with <a href="#">Prof. First Advisor</a> and <a href="#">Prof. Second Advisor</a>.
-     Previously I was a Research Assistant at <a href="#">Some Lab</a>.`,
+    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). 
+    I am fortunate to work with <a href="#">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a>.`,
 
-    `I obtained my B.S. from <a href="#">Undergrad University</a>, where I worked on research
-     projects supervised by <a href="#">Prof. Someone</a>.`,
-
-    `My research focuses on <i>one clear sentence about what you actually care about</i>.`
+    `My research focuses on <b> model reasoning </b> <i>one clear sentence about what you actually care about</i>.`
   ],
 
   // ---- footer icons: set any to "" to hide it ----
   social: {
-    email:    "you@example.edu",
-    github:   "https://github.com/yourusername",
-    scholar:  "https://scholar.google.com/citations?user=XXXXXXX",
-    twitter:  "",
-    linkedin: ""
+    email:    "tianyi.xu2@mail.mcgill.ca",
+    //github:   "https://github.com/yourusername",
+    scholar:  "https://scholar.google.com/citations?user=crQVBLoAAAAJ&hl=en",
+    //x:  "",
+    linkedin: "https://www.linkedin.com/in/tianyixucs/"
   },
 
   // ---- section behavior ----
