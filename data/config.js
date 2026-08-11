@@ -16,11 +16,11 @@ const CONFIG = {
 
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
-    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="#">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a>.`,
+    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="https://dadelani.github.io/index.html">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a>.`,
 
-    `I am interested in model reasoning
+    `I am interested in model reasoning. 
     
-    My research focuses on <b>multilingual model reasoning, mu</b>.`
+    My research focuses on <b>multilingual model reasoning</b>.`
   ],
 
   // ---- footer icons: set any to "" to hide it ----
