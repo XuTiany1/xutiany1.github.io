@@ -108,6 +108,46 @@
   });
   renderPapers("selected");
 
+  /* ---------------- education / internships / awards ---------------- */
+  function renderCard(id, data, itemHTML) {
+    const box = $(`#${id}`);
+    const heading = $(`#${id}-heading`);
+    if (typeof data === "undefined" || !data.length) {
+      box.remove();
+      if (heading) heading.remove();
+      return;
+    }
+    box.innerHTML = data.map(itemHTML).join("");
+  }
+
+  function timelineItemHTML(title, subtitle, entry) {
+    const range = entry.end ? `${esc(entry.start)} – ${esc(entry.end)}` : esc(entry.start);
+    const location = entry.location ? ` · ${esc(entry.location)}` : "";
+    return `
+      <div class="entry">
+        <p class="entry-date">${range}${location}</p>
+        <p class="entry-title">${esc(title)}</p>
+        <p class="entry-sub">${esc(subtitle)}</p>
+        ${entry.desc ? `<p class="entry-desc">${esc(entry.desc)}</p>` : ""}
+      </div>`;
+  }
+
+  renderCard("education", typeof EDUCATION !== "undefined" ? EDUCATION : undefined,
+    e => timelineItemHTML(e.school, e.degree, e));
+
+  renderCard("internships", typeof INTERNSHIPS !== "undefined" ? INTERNSHIPS : undefined,
+    e => timelineItemHTML(e.org, e.role, e));
+
+  renderCard("awards", typeof AWARDS !== "undefined" ? AWARDS : undefined, a => {
+    const meta = [a.issuer, a.date].filter(Boolean).map(esc).join(" · ");
+    return `
+      <div class="entry">
+        <p class="entry-title">${esc(a.name)}</p>
+        ${meta ? `<p class="entry-date">${meta}</p>` : ""}
+        ${a.desc ? `<p class="entry-desc">${esc(a.desc)}</p>` : ""}
+      </div>`;
+  });
+
   /* ---------------- footer ---------------- */
   const ICONS = {
     email:    '<svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.4l8 5 8-5V6H4zm16 3.1l-7.4 4.6a1 1 0 0 1-1.2 0L4 9.1V18h16V9.1z"/></svg>',

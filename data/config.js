@@ -12,7 +12,7 @@ const CONFIG = {
   photo: "assets/img/profile.jpg",
 
   // ---- accent color: one value re-themes the whole site ----
-  accent: "#009f13",
+  accent: "#c62828",
 
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
