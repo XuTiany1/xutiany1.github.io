@@ -12,9 +12,9 @@
 const EDUCATION = [
   {
     school: "McGill University",
-    degree: "B.A. & Sc. in Mathematics and Computer Science (Joint Honours)",
+    degree: "B.S. in Mathematics and Computer Science (Joint Honours)",
     start: "2022",
-    end: "2027 (IYS during 2026)",
+    end: "2027 (IYS during 2025-2026)",
     location: "Montreal, QC",
     desc: ""
   }
