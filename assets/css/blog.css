@@ -1,0 +1,45 @@
+/* ============================================================
+   Blog-only styles: list page cards + rendered markdown typography.
+   Reuses the CSS variables defined in style.css.
+   ============================================================ */
+
+/* ---------------- list page ---------------- */
+.blog-list{border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.blog-item{display:block;padding:20px 22px;border-bottom:1px solid var(--line);transition:background .15s ease}
+.blog-item:last-child{border-bottom:0}
+.blog-item:hover{background:var(--hover);text-decoration:none}
+.blog-item-date{font-size:13px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+.blog-item-title{font-size:20px;font-weight:700;margin:0 0 4px;line-height:1.4;color:var(--text)}
+.blog-item-excerpt{margin:0;color:var(--muted);font-size:16px}
+.blog-empty{padding:20px 22px;color:var(--muted)}
+
+/* ---------------- post header ---------------- */
+.post-date{font-size:13px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.post-title{font-size:40px;font-weight:300;letter-spacing:-.01em;margin:0 0 28px;line-height:1.15}
+.back-link{display:inline-block;margin-bottom:28px;font-size:15px}
+
+/* ---------------- rendered markdown body ---------------- */
+.post-body{font-size:17px;line-height:1.7}
+.post-body h1,.post-body h2,.post-body h3,.post-body h4{font-weight:700;line-height:1.35;margin:1.6em 0 .5em}
+.post-body h1{font-size:30px;border-bottom:1px solid var(--line);padding-bottom:.3em}
+.post-body h2{font-size:25px}
+.post-body h3{font-size:21px}
+.post-body h4{font-size:18px}
+.post-body p{margin:0 0 1.1em}
+.post-body ul,.post-body ol{margin:0 0 1.1em;padding-left:1.4em}
+.post-body li{margin:0 0 .4em}
+.post-body img{max-width:100%;display:block;margin:1.4em auto;border-radius:var(--radius);border:1px solid var(--line)}
+.post-body a{color:var(--accent)}
+.post-body strong{font-weight:700}
+.post-body hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.post-body code{background:var(--hover);border-radius:3px;padding:.15em .4em;font-size:.9em;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.post-body pre{background:var(--hover);border:1px solid var(--line);border-radius:8px;padding:14px 16px;overflow-x:auto;margin:0 0 1.1em}
+.post-body pre code{background:none;padding:0}
+.post-body blockquote{margin:0 0 1.1em;padding:2px 18px;border-left:3px solid var(--accent);color:var(--muted)}
+.post-body table{border-collapse:collapse;width:100%;margin:0 0 1.4em;display:block;overflow-x:auto}
+.post-body th,.post-body td{border:1px solid var(--line);padding:8px 12px;text-align:left}
+.post-body th{background:var(--hover)}
+.post-body details{margin:1.2em 0}
+.post-body .katex-display{overflow-x:auto;overflow-y:hidden;padding:.2em 0}
+
+.post-loading{color:var(--muted);padding:20px 0}
