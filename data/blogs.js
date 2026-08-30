@@ -15,10 +15,17 @@
 
 const BLOGS = [
   {
+    slug: "llava-family",
+    title: "The LlaVa Family of Vision-Language Models",
+    date: "Aug 2026",
+    excerpt: "A tour through the LlaVa family: from the original LlaVa's projection-layer trick, through LlaVa-1.5's MLP connector and higher-resolution variants, to LlaVa-NEXT, LlaVA-OneVision, and LlaVa-MORE.",
+    file: "blog/blog_llava_vlm.md"
+  },
+  {
     slug: "short-history-on-vision",
-    title: "A (Short) History of Vision Models",
+    title: "Back to the Foundation of Current Vision",
     date: "Aug 2026",
     excerpt: "A tour through the ideas that reshaped computer vision: ViT and ViT-5's architectural refinements, then CLIP, SigLIP, and SigLIP2's language-supervised learning objectives.",
-    file: "blog/blog_multimodal.md"
+    file: "blog/blog_vision_foundation.md"
   }
 ];
