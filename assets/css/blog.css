@@ -1,10 +1,16 @@
 /* ============================================================
    Blog-only styles: list page cards + rendered markdown typography.
    Reuses the CSS variables defined in style.css.
+   Also used by the course-notes pages (coursenote/).
    ============================================================ */
 
 /* ---------------- list page ---------------- */
 .blog-list{border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+
+/* ---------------- course-notes index: one block per area ---------------- */
+.cn-area{margin:0 0 40px}
+.cn-area-title{font-size:22px;font-weight:700;margin:0 0 4px;line-height:1.3;color:var(--text)}
+.cn-area-blurb{margin:0 0 14px;color:var(--muted);font-size:16px}
 .blog-item{display:block;padding:20px 22px;border-bottom:1px solid var(--line);transition:background .15s ease}
 .blog-item:last-child{border-bottom:0}
 .blog-item:hover{background:var(--hover);text-decoration:none}
