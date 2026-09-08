@@ -26,6 +26,13 @@ const COURSE_NOTES = {
       blurb: "Pre-deep-learning fundamentals — filtering, edges, features, and multi-view geometry.",
       notes: [
         {
+          slug: "edge_detection",
+          title: "Edge Detection",
+          date: "Sep 2026",
+          excerpt: "From threshold-a-difference to Prewitt/Sobel gradients to second-derivative zero-crossings; the Derivative of Gaussian, the Laplacian of a Gaussian, and Marr–Hildreth (1979).",
+          file: "coursenote/foundational_cv/edge_detection.md"
+        },
+        {
           slug: "image_filtering",
           title: "Image Filtering",
           date: "Sep 2026",

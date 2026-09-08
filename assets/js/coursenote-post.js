@@ -85,6 +85,13 @@
 
     bodyEl.innerHTML = html;
     addHeadingIds();
+
+    // The markdown loads async, so the browser's initial jump-to-#hash
+    // finds nothing. Re-run it once the content (and its ids) exist.
+    if (location.hash.length > 1) {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) target.scrollIntoView();
+    }
   }
 
   /* Give every heading a GitHub-style slug id so the Table of
@@ -92,6 +99,7 @@
   function addHeadingIds() {
     const seen = Object.create(null);
     const slugify = (s) => s.toLowerCase().trim()
+      .replace(/[‒-―]/g, "-")   // en/em/figure dashes -> hyphen
       .replace(/[^\w\s-]/g, "")
       .replace(/\s+/g, "-")
       .replace(/-+/g, "-");

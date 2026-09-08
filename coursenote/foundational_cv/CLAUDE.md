@@ -40,6 +40,8 @@ Inside that subfolder, files are named:
   notes disagree on a name or symbol, the slides win.
 - `NN-<topic>-lecturenotes.pdf` — lecture notes. Depth, proofs, derivations, worked examples.
 
+It is possible that we are missing one of the two, in that case, just use whatever is there. 
+
 If a lecture uses looser names, match on `presentation`/`slides` vs `lecturenotes` in the
 filename, or just read whatever PDFs are in the folder. For `image_filtering` the folder is
 `image_filtering/` with `03-imagefiltering-presentation.pdf` and
