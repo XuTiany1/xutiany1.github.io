@@ -39,6 +39,7 @@ Inside that subfolder, files are named:
 - `NN-<topic>-presentation.pdf` — slides. **Terminology authority.** When slides and lecture
   notes disagree on a name or symbol, the slides win.
 - `NN-<topic>-lecturenotes.pdf` — lecture notes. Depth, proofs, derivations, worked examples.
+- `NN-learningprocess-confusingconcept.pdf` - this is the student's learning process with a LLM that provides insightful examplars and explanation that guided the student to understanding. It is important to include these intuitive learnings into the final note (like throughout the note, whereever is appropriate to include). 
 
 It is possible that we are missing one of the two, in that case, just use whatever is there. 
 
@@ -58,6 +59,14 @@ and actually look at every image in this folder** — the filenames hint at what
 the note where that concept is introduced, with a one-line caption underneath. See
 "Rendering pipeline" for the path syntax. If an image has no natural home, leave it out and
 say which one and why.
+
+Fifth source (optional) — a **"learning process" PDF** in the PDF subfolder, named
+`NN-learningprocess-*.pdf`. This is a tutoring-chat transcript of Tianyi working through the
+material with an AI. It is *not* new lecture content — it's a map of **which parts were
+confusing and which analogy or worked example finally made them click**. Mine it for
+intuition boxes, worked numeric examples, and analogies to fold into the note (or a
+revision); don't add facts from it that aren't in the slides/lecture notes, and keep the
+terminology matching the presentation PDF.
 
 **Read every page of every PDF in the subfolder, and view every image in the img subfolder**
 (`Read` tool — `pages` for PDFs) before writing. Do not skim.

@@ -137,13 +137,29 @@ Two practical notes, then the payoff:
 - **Discrete renormalization.** The continuous Gaussian integrates to 1, but we don't get the continuous function — we sample it at integer pixel offsets, and those samples do *not* sum to exactly 1 in general. So in practice you sample $G$ over a finite window and divide by the sum, forcing the weights back to 1 so average brightness is preserved.
 - **It's the same tool later.** Gaussians come back when we discuss scale space, so this is not a one-off.
 
+<div style="background-color: #f4fbf8; border-left: 4px solid #22c27d; border-radius: 8px; padding: 16px; margin: 20px 0; color: #333;">
+  <div style="display: flex; align-items: center; gap: 8px; font-size: 1.1em; color: #22c27d;">
+    <span>🧮</span>
+    <strong>Example: Building a 3-Tap Gaussian Filter by Hand</strong>
+  </div>
+  <hr style="border: none; border-top: 1px solid #22c27d; margin: 12px 0;">
+  <p style="margin: 0 0 10px 0;">Take $\sigma = 1$, $\mu = 0$. The formula collapses to $G(x) \propto e^{-x^2/2}$, so we only need $e^{-x^2/2}$ at the three offsets:</p>
+  <p style="margin: 10px 0; text-align: center;">$x = 0:\; e^{0} = 1 \qquad x = \pm 1:\; e^{-1/2} \approx 0.607$</p>
+  <p style="margin: 10px 0;">Raw weights $[\,0.607,\; 1,\; 0.607\,]$ sum to $2.214$, which is $> 1$ — used as-is they would brighten the image. Divide each by $2.214$ (discrete renormalization):</p>
+  <p style="margin: 10px 0; text-align: center;">$f \approx [\,0.274,\; 0.452,\; 0.274\,] \qquad (\text{sums to } 1)$</p>
+  <p style="margin: 10px 0;">Now apply it to a bright spike in a dark row, pixels $[\,100,\; 200,\; 100\,]$, by lining the filter up and summing the products (a dot product):</p>
+  <p style="margin: 10px 0; text-align: center;">$0.274(100) + 0.452(200) + 0.274(100) = 27.4 + 90.4 + 27.4 = 145.2$</p>
+  <p style="margin: 0;">The spike at $200$ got pulled down to $145.2$ and its neighbors would be pulled up — the sharp bump is smoothed, exactly as intended.</p>
+</div>
+
 <div style="background-color: #f5f0fa; border-left: 4px solid #8e44ad; border-radius: 8px; padding: 16px; margin: 20px 0; color: #333;">
   <div style="display: flex; align-items: center; gap: 8px; font-size: 1.1em; color: #8e44ad;">
     <span>❗</span>
     <strong>Important Takeaway: σ Controls the Trade-off</strong>
   </div>
   <hr style="border: none; border-top: 1px solid #dcd0e8; margin: 12px 0;">
-  <p style="margin: 0;">As you increase the scale $\sigma$, you <b>reduce noise more</b> (you're averaging more independent samples) but you also <b>average together more pixels, blurring the signal more</b>. Every smoothing decision in vision is a choice of $\sigma$ along this axis.</p>
+  <p style="margin: 0 0 10px 0;">Turning $\sigma$ up makes the bell <b>shorter and wider</b>: weight drains off the center pixel and spreads to farther neighbors, so each output pixel is an average over a larger area.</p>
+  <p style="margin: 0;">The effect: you <b>reduce noise more</b> (you're averaging more independent samples) but you also <b>blur the signal more</b>, softening real edges. Every smoothing decision in vision is a choice of $\sigma$ along this axis.</p>
 </div>
 
 ## Local Difference
@@ -216,6 +232,8 @@ $$f(x) \otimes I(x) \;\equiv\; \sum_{u} f(u - x)\, I(u)$$
 
 Read it as: place a copy of the template $f$ at position $x$, then slide $u$ over the image and sum up the image values weighted by $f$. Think of $f$ as a **template you're matching against the image by an inner product** — "how well does the filter match the image when it's centered at $x$?"
 
+At each position this is a **dot product**: the length-$k$ weight vector against the $k$ pixels underneath it, collapsing a whole neighborhood into one output number. (A $1\times k$ row times a $k\times 1$ column is $1\times 1$ — a single value.) Sliding the template by one pixel and repeating produces the next output value, and so on across the image.
+
 The key feature: **no sign flip.** An offset of $+1$ into the image is read by $f(+1)$. The kernel's index *is* the direction you look. This is exactly the "slide a template across the image" picture most people already have.
 
 <div style="background-color: #f4fbf8; border-left: 4px solid #22c27d; border-radius: 8px; padding: 16px; margin: 20px 0; color: #333;">
@@ -277,6 +295,19 @@ $$f(x) * I(x) = \cdots + f(x{+}1)\,I({-}1) + f(x)\,I(0) + f(x{-}1)\,I(1) + f(x{-
   <p style="margin: 0;">If the filter is <b>symmetric</b> ($f(b) = f(-b)$) — which every averaging filter, including the Gaussian, is — the two operations give <b>identical results</b>. The distinction only bites for asymmetric filters like the derivative.</p>
 </div>
 
+If the filter is symmetric the flip is invisible, so *why does convolution bother?* Because there are two ways to read a filter, and convolution serves the more useful one.
+
+<div style="background-color: #e9eff9; border-left: 4px solid #227ac2; border-radius: 8px; padding: 16px; margin: 20px 0; color: #333;">
+  <div style="display: flex; align-items: center; gap: 8px; font-size: 1.1em; color: #227ac2;">
+    <span>➕</span>
+    <strong>Why the flip? The rubber-stamp picture</strong>
+  </div>
+  <hr style="border: none; border-top: 1px solid #227ac2; margin: 12px 0;">
+  <p style="margin: 0 0 10px 0;"><b>Read a filter as instructions for the input</b> — "multiply the pixel on my right by this, the one on my left by that" — and cross-correlation does exactly what you'd expect. Nothing is flipped; $f(+1)$ hits the pixel to the right.</p>
+  <p style="margin: 0 0 10px 0;"><b>Read a filter as the footprint you want <i>stamped onto the output</i></b> — its impulse response, the mark it should leave at a single bright pixel — and you need the flip. Sliding a stencil across a signal mirrors it, like a rubber stamp: carve <b>CAT</b> into the rubber and it prints <b>TAC</b>. Cross-correlation carves normally and prints reversed. Convolution's $f(x-u)$ carves the stamp <i>pre-flipped</i> (<b>TAC</b>), so the sliding mirror flips it back and the page reads <b>CAT</b>. Two flips = forward.</p>
+  <p style="margin: 0;">Check it on an impulse: $[1, 2, 3] * [0, 1, 0] = [1, 2, 3]$ — an exact, forward copy of the filter (this is <i>why</i> a filter is its impulse response). Cross-correlating instead gives the reversed $[3, 2, 1]$.</p>
+</div>
+
 ## Impulse Function and Impulse Response
 
 The simplest possible input is a single spike.
@@ -311,7 +342,7 @@ The first: $\sum_u \delta(x-u)\,I(u) = I(x)$, since $\delta(x-u)$ is zero unless
   <p style="margin: 0;">Because $\delta(x) * f(x) = f(x)$, the filter $f(x)$ is literally the output you get when the input is a single impulse at the origin. For that reason a filter is also called the <b>impulse response function</b>.</p>
 </div>
 
-Here's the intuition that makes convolution click. **Any image is a sum of shifted, scaled impulses** — one per pixel, each scaled by that pixel's intensity. Convolution is linear, so filtering the whole image is the same as filtering each impulse separately and adding up the results. Each impulse contributes one copy of $f$, shifted to its pixel and scaled by its intensity. That is exactly what $\sum_u f(x-u)\,I(u)$ says: **stack up one impulse response per pixel.**
+Here's the intuition that makes convolution click. **Any image is a sum of shifted, scaled impulses** — one per pixel, each scaled by that pixel's intensity. Convolution is linear, so filtering the whole image is the same as filtering each impulse separately and adding up the results. Each impulse contributes one copy of $f$, shifted to its pixel and scaled by its intensity. That is exactly what $\sum_u f(x-u)\,I(u)$ says: **stack up one impulse response per pixel.** Because every stamp lands forward-facing, chaining filters stays well-behaved — which is what powers the algebra in the next section.
 
 ## Algebraic Properties of Convolution
 
@@ -386,6 +417,20 @@ $$G(x, y; \sigma) \;=\; \frac{1}{2\pi\sigma^2}\; e^{-\frac{x^2 + y^2}{2\sigma^2}
 - **Integrates to 1.** Because it's separable, the 2D integral splits into two 1D integrals, each equal to 1.
 
 2D smoothing is then just $I_{smooth}(x, y) = G(x, y; \sigma) * I(x, y)$ — a local weighted average whose weights sum to 1.
+
+<div style="background-color: #f4fbf8; border-left: 4px solid #22c27d; border-radius: 8px; padding: 16px; margin: 20px 0; color: #333;">
+  <div style="display: flex; align-items: center; gap: 8px; font-size: 1.1em; color: #22c27d;">
+    <span>🧮</span>
+    <strong>Example: The 3×3 Gaussian Kernel</strong>
+  </div>
+  <hr style="border: none; border-top: 1px solid #22c27d; margin: 12px 0;">
+  <p style="margin: 0 0 10px 0;">Same recipe as the 3-tap 1D filter, one more axis. With $\sigma = 1$ the weight at offset $(x, y)$ is proportional to $e^{-(x^2 + y^2)/2}$, so every one of the nine positions is set by its squared distance from the center:</p>
+  <p style="margin: 10px 0; text-align: center;">center $(0,0)$: $e^{0} = 1$ &nbsp;&bull;&nbsp; edges $(\pm 1, 0), (0, \pm 1)$: $e^{-1/2} \approx 0.607$ &nbsp;&bull;&nbsp; corners $(\pm 1, \pm 1)$: $e^{-1} \approx 0.368$</p>
+
+$$\text{raw} \;=\; \begin{bmatrix} 0.368 & 0.607 & 0.368 \\ 0.607 & 1.000 & 0.607 \\ 0.368 & 0.607 & 0.368 \end{bmatrix}$$
+
+  <p style="margin: 10px 0;">The four corners are equal because squaring kills the signs — that's the 2D version of the Gaussian's symmetry. The nine entries sum to $\approx 4.90$, so divide the whole grid by $4.90$ to get weights that sum to 1. Then it's the same operation as before: lay the $3\times 3$ grid over a $3\times 3$ patch, multiply the nine overlapping pairs, add them into <b>one</b> new pixel, slide.</p>
+</div>
 
 <div style="background-color: #f5f0fa; border-left: 4px solid #8e44ad; border-radius: 8px; padding: 16px; margin: 20px 0; color: #333;">
   <div style="display: flex; align-items: center; gap: 8px; font-size: 1.1em; color: #8e44ad;">
