@@ -14,11 +14,11 @@
 const PUBLICATIONS = [
   {
     selected: true,
-    badge: "Under Submission",
+    badge: "AACL",
     thumb: "assets/img/papers/MGSM_PRO.png",
     title: "MGSM-Pro: A Simple Strategy for Robust Multilingual Mathematical Reasoning Evaluation",
     authors: "{me}, Kosei Uemura, Alfred Malengo Kondoro, Tadesse Destaw Belay, Catherine Nana Nyaah Essuman, Ifeoma Okoh, Ganiyat Afolabi, Ayodele Awokoya, David Ifeoluwa Adelani",
-    venue: "",
+    venue: "AACL 2026",
     note: "",
     links: [
       { label: "paper", url: "https://arxiv.org/abs/2601.21225" },

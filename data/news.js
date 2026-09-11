@@ -10,21 +10,13 @@
    ============================================================ */
 
 const NEWS = [
-  // {
-  //   date: "May 2026",
-  //   title: "BAGEN: Are LLM Agents Budget-Aware?",
-  //   tag: "(Preprint, Midwest ML 2026 Spotlight)",
-  //   desc: "New preprint · Budget awareness decouples from task performance and is trainable",
-  //   url: "https://arxiv.org/abs/0000.00000",
-  //   pinned: true
-  // },
-  // {
-  //   date: "Feb 2026",
-  //   title: "RAGEN-2: Reasoning Collapse in Agentic RL",
-  //   tag: "(ICML 2026 Oral, top 0.7%)",
-  //   desc: "SNR-Aware Filtering fixes template collapse · Featured in Nebius' ICML 2026 \"Papers That Matter\"",
-  //   url: ""
-  // },
+  {
+    date: "September 2026",
+    title: "MGSM-Pro accepted to AACL 2026",
+    tag: "",
+    desc: "Evaluating multilingual math reasoning robustness in LLMs",
+    url: ""
+  },
   {
     date: "July 2026",
     title: "AfriqueLLM: How Data Mixing and Model Architecture Impact Continued Pre-training for African Languages",
