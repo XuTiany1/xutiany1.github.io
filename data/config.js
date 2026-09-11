@@ -9,17 +9,19 @@ const CONFIG = {
   lastName: "Xu",
 
   // ---- profile photo ----
-  photo: "assets/img/profile.jpg",
+  photo: "assets/img/profile_pic/profile_pic.JPG",
 
   // ---- accent color: one value re-themes the whole site ----
   accent: "#c62828",
 
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
-    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="https://dadelani.github.io/index.html">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a>.`,
+    `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="https://dadelani.github.io/index.html">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a> and <a href="https://mcgill-nlp.github.io/"McGill NLP</a>.`,
 
-    `Reasoning ≠ Memorization. I am interested in improving model reasoning capability and robustness so it is more applicable for real-world usages. My research interest lies in model reasoning for both langauge and vision.`
-  ],
+    `My research interest lies in <i> model reasoning </i>, over language and space. 
+    
+    As <b> reasoning ≠ memorization </b>, I am interested in exploring training recipies to make current LLMs more robust and capable. I am also quite interested in spatial reasoning, specifically long-horizon planning/exploration. `
+    ],
 
   // ---- footer icons: set any to "" to hide it ----
   social: {
