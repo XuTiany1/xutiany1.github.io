@@ -11,6 +11,8 @@
 
   if (window.CONFIG && CONFIG.accent) {
     document.documentElement.style.setProperty("--accent", CONFIG.accent);
+    const [r, g, b] = CONFIG.accent.match(/\w\w/g).map(h => parseInt(h, 16));
+    document.documentElement.style.setProperty("--accent-soft", `rgba(${r},${g},${b},.12)`);
   }
 
   const slug = new URLSearchParams(location.search).get("slug");

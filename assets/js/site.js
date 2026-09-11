@@ -14,6 +14,8 @@
   document.title = fullName;
   if (CONFIG.accent) {
     document.documentElement.style.setProperty("--accent", CONFIG.accent);
+    const [r, g, b] = CONFIG.accent.match(/\w\w/g).map(h => parseInt(h, 16));
+    document.documentElement.style.setProperty("--accent-soft", `rgba(${r},${g},${b},.12)`);
   }
   $("#first-name").textContent = CONFIG.firstName;
   $("#last-name").textContent = CONFIG.lastName;

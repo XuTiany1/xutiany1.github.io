@@ -4,8 +4,8 @@
    ============================================================ */
 
 :root{
-  --accent:#b509ac;
-  --accent-soft:#f3ecfa;
+  --accent:#c62828;
+  --accent-soft:#fbeaea;
   --bg:#ffffff;
   --text:#212529;
   --muted:#6c757d;
@@ -20,7 +20,7 @@ html[data-theme="dark"]{
   --muted:#9a9a9a;
   --line:#2f2f31;
   --hover:#242426;
-  --accent-soft:rgba(181,9,172,.12);
+  --accent-soft:rgba(198,40,40,.12);
 }
 
 *{box-sizing:border-box}
