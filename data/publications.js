@@ -18,7 +18,7 @@ const PUBLICATIONS = [
     thumb: "assets/img/papers/depth_through_recurrence.png",
     title: "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
     authors: "Chen Feng, {me}, Yicheng Lin, Shaojie Zhuo, Ramchalam Kinattinkara Ramakrishnan, Zhaocong Yuan, Chenzheng Su, Xiaopeng Zhang",
-    venue: "Under Submission",
+    venue: "Work during Qualcomm AI Research intern",
     note: "",
     links: [
     ]
