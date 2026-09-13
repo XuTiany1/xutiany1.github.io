@@ -28,7 +28,7 @@ const NEWS = [
     date: "July 2025",
     title: "Joined Qualcomm AI Research as a research intern",
     tag: "",
-    desc: "Focus on building personalized ASR models with significant lower inference cost",
+    desc: "Focus on improving ASR model architecture for efficient edge deployment",
     url: ""
   },
   {
