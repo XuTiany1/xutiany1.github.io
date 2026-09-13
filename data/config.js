@@ -17,9 +17,9 @@ const CONFIG = {
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
     `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="https://dadelani.github.io/index.html">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a> and <a href="https://mcgill-nlp.github.io/"> McGill NLP </a>.`,
-    `I was also a research intern at <a href="https://www.qualcomm.com/research/artificial-intelligence"> Qualcomm Research</a> working with efficient ASR architecture for edge-devices.`
+    `I was also a research intern at <a href="https://www.qualcomm.com/research/artificial-intelligence"> Qualcomm Research</a> working with efficient ASR architecture for edge-devices.`,
 
-    `My research interest lies in <i> robust multimodal model reasoning </i> and <i> multi-agent systems</i>.  
+    `My research interest lies in <i> robust multimodal model reasoning </i> and <i> multi-agent systems</i>.
     
     As <b> reasoning ≠ memorization </b>, I am interested in exploring training recipies to make current LLMs more robust and capable. I am also quite interested in spatial reasoning, specifically long-horizon planning/exploration. `
     ],

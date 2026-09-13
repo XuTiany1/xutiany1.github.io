@@ -14,6 +14,17 @@
 const PUBLICATIONS = [
   {
     selected: true,
+    badge: "Under Submission",
+    thumb: "assets/img/papers/depth_through_recurrence.png",
+    title: "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
+    authors: "Chen Feng, {me}, Yicheng Lin, Shaojie Zhuo, Ramchalam Kinattinkara Ramakrishnan, Zhaocong Yuan, Chenzheng Su, Xiaopeng Zhang",
+    venue: "Under Submission",
+    note: "",
+    links: [
+    ]
+  },
+  {
+    selected: true,
     badge: "AACL",
     thumb: "assets/img/papers/MGSM_PRO.png",
     title: "MGSM-Pro: A Simple Strategy for Robust Multilingual Mathematical Reasoning Evaluation",
