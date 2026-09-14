@@ -25,7 +25,7 @@ const NEWS = [
     url: ""
   },
   {
-    date: "July 2025",
+    date: "June 2025",
     title: "Joined Qualcomm AI Research as a research intern",
     tag: "",
     desc: "Focus on improving ASR model architecture for efficient edge deployment",
