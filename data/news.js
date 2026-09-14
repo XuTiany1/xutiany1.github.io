@@ -18,10 +18,10 @@ const NEWS = [
     url: ""
   },
   {
-    date: "July 2026",
-    title: "AfriqueLLM: How Data Mixing and Model Architecture Impact Continued Pre-training for African Languages",
-    tag: "(ACL 2026 Oral)",
-    desc: "SOTA LLM suite for African languages",
+    date: "April 2026",
+    title: "AfriqueLLM accepted to ACL 2026 Oral",
+    tag: "",
+    desc: "Continued pre-training recipe investigation for multilingual LLMs",
     url: ""
   },
   {
