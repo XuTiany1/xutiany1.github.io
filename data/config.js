@@ -19,7 +19,9 @@ const CONFIG = {
     `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursing math and computer science degree(joint honours). I am also fortunate to work with <a href="https://dadelani.github.io/index.html">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a> and <a href="https://mcgill-nlp.github.io/"> McGill NLP </a>.`,
     `I was also a research intern at <a href="https://www.qualcomm.com/research/artificial-intelligence"> Qualcomm Research</a> working on efficient ASR architecture for edge-devices.`,
 
-    `My research interest is primarily concerned in understanding the specific factors that cause models to generate the outputs they do and explores what truly enhances their reasoning capabilities (reasoning ≠ memorization). My long-term vision is for models to be <b>robust, responsible, efficient, and capable</b> reasoners across multiple modalities. Recently, my work focuses on multimodal multi-agent coordination and continued pre-training of foundation LLMs.`
+    `My research interest is primarily concerned in understanding the specific factors that cause models to generate the outputs they do and explores what truly enhances their reasoning capabilities (<b>reasoning ≠ memorization</b>). `
+    
+    `My long-term vision is for models to be <b>robust, responsible, efficient, and capable</b> reasoners across multiple modalities. Recently, my work focuses on multimodal multi-agent coordination and continued pre-training of foundation LLMs.`
     ],
 
   // ---- footer icons: set any to "" to hide it ----
