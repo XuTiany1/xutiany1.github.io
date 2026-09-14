@@ -16,7 +16,7 @@ const INTERNSHIPS = [
     start: "Jan 2025",
     end: "Present",
     location: "Montreal, QC",
-    desc: "Multilingual model reasoning and foundation models"
+    desc: "Multilingual model robustness, and Continue pre-training of foundation models"
   },
   {
     org: "Qualcomm AI Research",
