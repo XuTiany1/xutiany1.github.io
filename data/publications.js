@@ -14,11 +14,11 @@
 const PUBLICATIONS = [
   {
     selected: true,
-    badge: "Under Submission",
+    badge: "NeurIPS",
     thumb: "assets/img/papers/depth_through_recurrence.png",
     title: "Depth through Recurrence: Towards Ultra-Efficient On-Device ASR",
     authors: "Chen Feng, {me}, Yicheng Lin, Shaojie Zhuo, Ramchalam Kinattinkara Ramakrishnan, Zhaocong Yuan, Chenzheng Su, Xiaopeng Zhang",
-    venue: "Work during Qualcomm AI Research intern",
+    venue: "NeurIPS 2026 · Work done during internship at Qualcomm",
     note: "",
     links: [
     ]

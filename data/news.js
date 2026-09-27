@@ -12,6 +12,13 @@
 const NEWS = [
   {
     date: "September 2026",
+    title: "Depth through Recurrence accepted to NeurIPS 2026",
+    tag: "",
+    desc: "Recurrent architecture + MoE-LoRA for ultra-efficient on-device ASR",
+    url: ""
+  },
+  {
+    date: "September 2026",
     title: "MGSM-Pro accepted to AACL 2026",
     tag: "",
     desc: "Evaluating multilingual math reasoning robustness in LLMs",
@@ -26,7 +33,7 @@ const NEWS = [
   },
   {
     date: "June 2025",
-    title: "Joined Qualcomm AI Research as a research intern",
+    title: "Joined Qualcomm as a research intern",
     tag: "",
     desc: "Focus on improving ASR model architecture for efficient edge deployment",
     url: ""
