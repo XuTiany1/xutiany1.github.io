@@ -12,12 +12,12 @@ const AWARDS = [
     name: "USRA Undergraduate Student Research Award",
     issuer: "NSERC",
     date: "2025",
-    desc: "Research scholarship of $7500"
+    desc: "National research award "
   },
   {
-    name: "J W McConnell Scholarship",
+    name: "J.W. McConnell Scholarship,",
     issuer: "McGill",
-    date: "2022, 2023, 2024",
-    desc: "Major entrance scholarship of $9,000 based on outstanding academic achievement"
+    date: "2022 - 2024",
+    desc: "Top 2%"
   }
 ];

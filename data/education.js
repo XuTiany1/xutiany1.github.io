@@ -16,6 +16,6 @@ const EDUCATION = [
     start: "2022",
     end: "2027 (internship during 2025-2026)",
     location: "Montreal, QC",
-    desc: ""
+    desc: "GPA: 3.90/4.00"
   }
 ];
