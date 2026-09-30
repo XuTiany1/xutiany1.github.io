@@ -22,6 +22,8 @@ const CONFIG = {
     `My research interest is primarily concerned with exploring what truly enhances model reasoning capabilities (<b>reasoning ≠ memorization</b>). `,
     
     `My long-term vision is for models to be <b>robust, responsible, efficient, and capable</b> reasoners across multiple modalities. Recently, my work focuses on continued pre-training of foundation LLMs.`,
+    
+    `Previously, I was a research intern at McGill under <a href="https://isabeaups.github.io/">Prof. Isabeau Prémont-Schwarz</a> working on continual learning.` 
 
     `Aside from research, I enjoy 🏸 , 𓌉◯𓇋 , and fingerstyle guitar!`
     ],
