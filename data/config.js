@@ -17,7 +17,7 @@ const CONFIG = {
   // ---- bio: one string per paragraph, HTML links are fine ----
   bio: [
     `I am a <b>fourth-year undergraduate</b> at <a href="https://www.mcgill.ca/">McGill University</a> pursuing Joint Honours Mathematics and Computer Science. I am also fortunate to work with <a href="https://dadelani.github.io/index.html">Prof. David Adelani</a> at <a href="https://mila.quebec/en">Mila</a> and <a href="https://mcgill-nlp.github.io/"> McGill NLP </a>.`,
-    `I was also a research intern at <a href="https://www.qualcomm.com/research/artificial-intelligence">Qualcomm</a>, supervised by <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=1U3vbI0AAAAJ">Dr. Xiaopeng Zhang</a>, working on recurrent architecture + MoE-LoRA for efficient on-device ASR.`,
+    `I was also a research intern at <a href="https://www.qualcomm.com/research/artificial-intelligence">Qualcomm AI Research</a>, supervised by <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=1U3vbI0AAAAJ">Dr. Xiaopeng Zhang</a>, working on recurrent architecture + MoE-LoRA for efficient on-device ASR.`,
 
     `My research interest is primarily concerned with <b>foundation models</b> and exploring the mechanics that actually improve their reasoning, from how we structure the models to the data we feed them.`,
     
