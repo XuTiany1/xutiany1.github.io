@@ -30,9 +30,10 @@ const PUBLICATIONS = [
     title: "MGSM-Pro: A Simple Strategy for Robust Multilingual Mathematical Reasoning Evaluation",
     authors: "{me}, Kosei Uemura, Alfred Malengo Kondoro, Tadesse Destaw Belay, Catherine Nana Nyaah Essuman, Ifeoma Okoh, Ganiyat Afolabi, Ayodele Awokoya, David Ifeoluwa Adelani",
     venue: "AACL 2026",
-    note: "",
+    note: "(Oral)",
     links: [
       { label: "paper", url: "https://arxiv.org/abs/2601.21225" },
+      { label: "code", url: "https://github.com/XuTiany1/MGSM-Pro"},
       { label: "dataset",  url: "https://huggingface.co/datasets/McGill-NLP/mgsm-pro" },
     ]
   },
@@ -45,7 +46,9 @@ const PUBLICATIONS = [
     venue: "ACL 2026",
     note: "(Oral)",
     links: [
-      { label: "paper", url: "https://aclanthology.org/2026.acl-long.267/" }
+      { label: "paper", url: "https://aclanthology.org/2026.acl-long.267/" },
+      { label: "code", url: "https://github.com/McGill-NLP/AfriqueLLM"},
+      { label: "model",  url: "https://huggingface.co/collections/McGill-NLP/afriquellm" },
     ]
   },
   {

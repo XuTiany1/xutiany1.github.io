@@ -19,7 +19,7 @@ const NEWS = [
   },
   {
     date: "September 2026",
-    title: "MGSM-Pro accepted to AACL 2026",
+    title: "MGSM-Pro accepted to AACL 2026 Oral",
     tag: "",
     desc: "Evaluating multilingual math reasoning robustness in LLMs",
     url: ""
