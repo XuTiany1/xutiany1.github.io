@@ -21,6 +21,7 @@ const PUBLICATIONS = [
     venue: "NeurIPS 2026 · Work done during internship at Qualcomm",
     note: "",
     links: [
+      { label: "paper", url: "https://arxiv.org/abs/2610.37833" },
     ]
   },
   {
